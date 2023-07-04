@@ -1,0 +1,114 @@
+Test-Command: /usr/share/cargo/bin/cargo-auto-test log 0.4.17 --all-targets --all-features
+Features: test-name=rust-log:@
+Depends: dh-cargo (>= 18), librust-rustversion-1+default-dev, librust-serde-1+default-dev, librust-serde-1+derive-dev, librust-serde-test-1+default-dev, librust-sval-1.0.0+default-dev, librust-sval-1.0.0+derive-dev, librust-value-bag-1.0.0+default-dev, librust-value-bag-1.0.0+test-dev, @
+Restrictions: allow-stderr, skip-not-installable, flaky
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test log 0.4.17 --all-targets 
+Features: test-name=librust-log-dev:default
+Depends: dh-cargo (>= 18), librust-rustversion-1+default-dev, librust-serde-1+default-dev, librust-serde-1+derive-dev, librust-serde-test-1+default-dev, librust-sval-1.0.0+default-dev, librust-sval-1.0.0+derive-dev, librust-value-bag-1.0.0+default-dev, librust-value-bag-1.0.0+test-dev, @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test log 0.4.17 --all-targets --no-default-features --features kv_unstable
+Features: test-name=librust-log-dev:kv_unstable
+Depends: dh-cargo (>= 18), librust-rustversion-1+default-dev, librust-serde-1+default-dev, librust-serde-1+derive-dev, librust-serde-test-1+default-dev, librust-sval-1.0.0+default-dev, librust-sval-1.0.0+derive-dev, librust-value-bag-1.0.0+default-dev, librust-value-bag-1.0.0+test-dev, @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test log 0.4.17 --all-targets --no-default-features --features kv_unstable_serde
+Features: test-name=librust-log-dev:kv_unstable_serde
+Depends: dh-cargo (>= 18), librust-rustversion-1+default-dev, librust-serde-1+default-dev, librust-serde-1+derive-dev, librust-serde-test-1+default-dev, librust-sval-1.0.0+default-dev, librust-sval-1.0.0+derive-dev, librust-value-bag-1.0.0+default-dev, librust-value-bag-1.0.0+test-dev, @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test log 0.4.17 --all-targets --no-default-features --features kv_unstable_std
+Features: test-name=librust-log-dev:kv_unstable_std
+Depends: dh-cargo (>= 18), librust-rustversion-1+default-dev, librust-serde-1+default-dev, librust-serde-1+derive-dev, librust-serde-test-1+default-dev, librust-sval-1.0.0+default-dev, librust-sval-1.0.0+derive-dev, librust-value-bag-1.0.0+default-dev, librust-value-bag-1.0.0+test-dev, @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test log 0.4.17 --all-targets --no-default-features --features kv_unstable_sval
+Features: test-name=librust-log-dev:kv_unstable_sval
+Depends: dh-cargo (>= 18), librust-rustversion-1+default-dev, librust-serde-1+default-dev, librust-serde-1+derive-dev, librust-serde-test-1+default-dev, librust-sval-1.0.0+default-dev, librust-sval-1.0.0+derive-dev, librust-value-bag-1.0.0+default-dev, librust-value-bag-1.0.0+test-dev, @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test log 0.4.17 --all-targets --no-default-features --features max_level_debug
+Features: test-name=librust-log-dev:max_level_debug
+Depends: dh-cargo (>= 18), librust-rustversion-1+default-dev, librust-serde-1+default-dev, librust-serde-1+derive-dev, librust-serde-test-1+default-dev, librust-sval-1.0.0+default-dev, librust-sval-1.0.0+derive-dev, librust-value-bag-1.0.0+default-dev, librust-value-bag-1.0.0+test-dev, @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test log 0.4.17 --all-targets --no-default-features --features max_level_error
+Features: test-name=librust-log-dev:max_level_error
+Depends: dh-cargo (>= 18), librust-rustversion-1+default-dev, librust-serde-1+default-dev, librust-serde-1+derive-dev, librust-serde-test-1+default-dev, librust-sval-1.0.0+default-dev, librust-sval-1.0.0+derive-dev, librust-value-bag-1.0.0+default-dev, librust-value-bag-1.0.0+test-dev, @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test log 0.4.17 --all-targets --no-default-features --features max_level_info
+Features: test-name=librust-log-dev:max_level_info
+Depends: dh-cargo (>= 18), librust-rustversion-1+default-dev, librust-serde-1+default-dev, librust-serde-1+derive-dev, librust-serde-test-1+default-dev, librust-sval-1.0.0+default-dev, librust-sval-1.0.0+derive-dev, librust-value-bag-1.0.0+default-dev, librust-value-bag-1.0.0+test-dev, @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test log 0.4.17 --all-targets --no-default-features --features max_level_off
+Features: test-name=librust-log-dev:max_level_off
+Depends: dh-cargo (>= 18), librust-rustversion-1+default-dev, librust-serde-1+default-dev, librust-serde-1+derive-dev, librust-serde-test-1+default-dev, librust-sval-1.0.0+default-dev, librust-sval-1.0.0+derive-dev, librust-value-bag-1.0.0+default-dev, librust-value-bag-1.0.0+test-dev, @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test log 0.4.17 --all-targets --no-default-features --features max_level_trace
+Features: test-name=librust-log-dev:max_level_trace
+Depends: dh-cargo (>= 18), librust-rustversion-1+default-dev, librust-serde-1+default-dev, librust-serde-1+derive-dev, librust-serde-test-1+default-dev, librust-sval-1.0.0+default-dev, librust-sval-1.0.0+derive-dev, librust-value-bag-1.0.0+default-dev, librust-value-bag-1.0.0+test-dev, @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test log 0.4.17 --all-targets --no-default-features --features max_level_warn
+Features: test-name=librust-log-dev:max_level_warn
+Depends: dh-cargo (>= 18), librust-rustversion-1+default-dev, librust-serde-1+default-dev, librust-serde-1+derive-dev, librust-serde-test-1+default-dev, librust-sval-1.0.0+default-dev, librust-sval-1.0.0+derive-dev, librust-value-bag-1.0.0+default-dev, librust-value-bag-1.0.0+test-dev, @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test log 0.4.17 --all-targets --no-default-features --features release_max_level_debug
+Features: test-name=librust-log-dev:release_max_level_debug
+Depends: dh-cargo (>= 18), librust-rustversion-1+default-dev, librust-serde-1+default-dev, librust-serde-1+derive-dev, librust-serde-test-1+default-dev, librust-sval-1.0.0+default-dev, librust-sval-1.0.0+derive-dev, librust-value-bag-1.0.0+default-dev, librust-value-bag-1.0.0+test-dev, @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test log 0.4.17 --all-targets --no-default-features --features release_max_level_error
+Features: test-name=librust-log-dev:release_max_level_error
+Depends: dh-cargo (>= 18), librust-rustversion-1+default-dev, librust-serde-1+default-dev, librust-serde-1+derive-dev, librust-serde-test-1+default-dev, librust-sval-1.0.0+default-dev, librust-sval-1.0.0+derive-dev, librust-value-bag-1.0.0+default-dev, librust-value-bag-1.0.0+test-dev, @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test log 0.4.17 --all-targets --no-default-features --features release_max_level_info
+Features: test-name=librust-log-dev:release_max_level_info
+Depends: dh-cargo (>= 18), librust-rustversion-1+default-dev, librust-serde-1+default-dev, librust-serde-1+derive-dev, librust-serde-test-1+default-dev, librust-sval-1.0.0+default-dev, librust-sval-1.0.0+derive-dev, librust-value-bag-1.0.0+default-dev, librust-value-bag-1.0.0+test-dev, @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test log 0.4.17 --all-targets --no-default-features --features release_max_level_off
+Features: test-name=librust-log-dev:release_max_level_off
+Depends: dh-cargo (>= 18), librust-rustversion-1+default-dev, librust-serde-1+default-dev, librust-serde-1+derive-dev, librust-serde-test-1+default-dev, librust-sval-1.0.0+default-dev, librust-sval-1.0.0+derive-dev, librust-value-bag-1.0.0+default-dev, librust-value-bag-1.0.0+test-dev, @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test log 0.4.17 --all-targets --no-default-features --features release_max_level_trace
+Features: test-name=librust-log-dev:release_max_level_trace
+Depends: dh-cargo (>= 18), librust-rustversion-1+default-dev, librust-serde-1+default-dev, librust-serde-1+derive-dev, librust-serde-test-1+default-dev, librust-sval-1.0.0+default-dev, librust-sval-1.0.0+derive-dev, librust-value-bag-1.0.0+default-dev, librust-value-bag-1.0.0+test-dev, @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test log 0.4.17 --all-targets --no-default-features --features release_max_level_warn
+Features: test-name=librust-log-dev:release_max_level_warn
+Depends: dh-cargo (>= 18), librust-rustversion-1+default-dev, librust-serde-1+default-dev, librust-serde-1+derive-dev, librust-serde-test-1+default-dev, librust-sval-1.0.0+default-dev, librust-sval-1.0.0+derive-dev, librust-value-bag-1.0.0+default-dev, librust-value-bag-1.0.0+test-dev, @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test log 0.4.17 --all-targets --no-default-features --features serde
+Features: test-name=librust-log-dev:serde
+Depends: dh-cargo (>= 18), librust-rustversion-1+default-dev, librust-serde-1+default-dev, librust-serde-1+derive-dev, librust-serde-test-1+default-dev, librust-sval-1.0.0+default-dev, librust-sval-1.0.0+derive-dev, librust-value-bag-1.0.0+default-dev, librust-value-bag-1.0.0+test-dev, @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test log 0.4.17 --all-targets --no-default-features --features std
+Features: test-name=librust-log-dev:std
+Depends: dh-cargo (>= 18), librust-rustversion-1+default-dev, librust-serde-1+default-dev, librust-serde-1+derive-dev, librust-serde-test-1+default-dev, librust-sval-1.0.0+default-dev, librust-sval-1.0.0+derive-dev, librust-value-bag-1.0.0+default-dev, librust-value-bag-1.0.0+test-dev, @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test log 0.4.17 --all-targets --no-default-features --features sval
+Features: test-name=librust-log-dev:sval
+Depends: dh-cargo (>= 18), librust-rustversion-1+default-dev, librust-serde-1+default-dev, librust-serde-1+derive-dev, librust-serde-test-1+default-dev, librust-sval-1.0.0+default-dev, librust-sval-1.0.0+derive-dev, librust-value-bag-1.0.0+default-dev, librust-value-bag-1.0.0+test-dev, @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test log 0.4.17 --all-targets --no-default-features --features value-bag
+Features: test-name=librust-log-dev:value-bag
+Depends: dh-cargo (>= 18), librust-rustversion-1+default-dev, librust-serde-1+default-dev, librust-serde-1+derive-dev, librust-serde-test-1+default-dev, librust-sval-1.0.0+default-dev, librust-sval-1.0.0+derive-dev, librust-value-bag-1.0.0+default-dev, librust-value-bag-1.0.0+test-dev, @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test log 0.4.17 --all-targets --no-default-features
+Features: test-name=librust-log-dev:
+Depends: dh-cargo (>= 18), librust-rustversion-1+default-dev, librust-serde-1+default-dev, librust-serde-1+derive-dev, librust-serde-test-1+default-dev, librust-sval-1.0.0+default-dev, librust-sval-1.0.0+derive-dev, librust-value-bag-1.0.0+default-dev, librust-value-bag-1.0.0+test-dev, @
+Restrictions: allow-stderr, skip-not-installable
