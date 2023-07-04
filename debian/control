@@ -1,15 +1,120 @@
-Source: template-repository
-Section: unknown
+Source: rust-log
+Section: rust
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Maintainer: Cruise.zrz <Cruise.zrz@gmail.com>
+Build-Depends: debhelper (>= 12),
+ dh-cargo (>= 25),
+ cargo:native <!nocheck>,
+ rustc:native <!nocheck>,
+ libstd-rust-dev <!nocheck>,
+ librust-cfg-if-dev
+Standards-Version: 4.6.0
+Homepage: https://github.com/deepin-community
+#Vcs-Browser: https://salsa.debian.org/debian/log
+#Vcs-Git: https://salsa.debian.org/debian/log.git
+Rules-Requires-Root: no
 
-Package: template-repository
+Package: librust-log-dev
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Multi-Arch: same
+Depends:
+ ${shlibs:Depends}, ${misc:Depends},
+ librust-cfg-if-0.1.10-dev,
+ librust-serde-1-dev,
+ librust-sval-1.0.0-dev,
+ librust-value-bag-1.0.0+error-dev,
+ librust-value-bag-1.0.0+serde-dev,
+ librust-value-bag-1.0.0+sval-dev,
+ librust-value-bag-1.0.0-dev
+Provides:
+ librust-log+default-dev (= ${binary:Version}),
+ librust-log+kv-unstable-dev (= ${binary:Version}),
+ librust-log+kv-unstable-serde-dev (= ${binary:Version}),
+ librust-log+kv-unstable-std-dev (= ${binary:Version}),
+ librust-log+kv-unstable-sval-dev (= ${binary:Version}),
+ librust-log+max-level-debug-dev (= ${binary:Version}),
+ librust-log+max-level-error-dev (= ${binary:Version}),
+ librust-log+max-level-info-dev (= ${binary:Version}),
+ librust-log+max-level-off-dev (= ${binary:Version}),
+ librust-log+max-level-trace-dev (= ${binary:Version}),
+ librust-log+max-level-warn-dev (= ${binary:Version}),
+ librust-log+release-max-level-debug-dev (= ${binary:Version}),
+ librust-log+release-max-level-error-dev (= ${binary:Version}),
+ librust-log+release-max-level-info-dev (= ${binary:Version}),
+ librust-log+release-max-level-off-dev (= ${binary:Version}),
+ librust-log+release-max-level-trace-dev (= ${binary:Version}),
+ librust-log+release-max-level-warn-dev (= ${binary:Version}),
+ librust-log+serde-dev (= ${binary:Version}),
+ librust-log+std-dev (= ${binary:Version}),
+ librust-log+sval-dev (= ${binary:Version}),
+ librust-log+value-bag-dev (= ${binary:Version}),
+ librust-log-0-dev (= ${binary:Version}),
+ librust-log-0+default-dev (= ${binary:Version}),
+ librust-log-0+kv-unstable-dev (= ${binary:Version}),
+ librust-log-0+kv-unstable-serde-dev (= ${binary:Version}),
+ librust-log-0+kv-unstable-std-dev (= ${binary:Version}),
+ librust-log-0+kv-unstable-sval-dev (= ${binary:Version}),
+ librust-log-0+max-level-debug-dev (= ${binary:Version}),
+ librust-log-0+max-level-error-dev (= ${binary:Version}),
+ librust-log-0+max-level-info-dev (= ${binary:Version}),
+ librust-log-0+max-level-off-dev (= ${binary:Version}),
+ librust-log-0+max-level-trace-dev (= ${binary:Version}),
+ librust-log-0+max-level-warn-dev (= ${binary:Version}),
+ librust-log-0+release-max-level-debug-dev (= ${binary:Version}),
+ librust-log-0+release-max-level-error-dev (= ${binary:Version}),
+ librust-log-0+release-max-level-info-dev (= ${binary:Version}),
+ librust-log-0+release-max-level-off-dev (= ${binary:Version}),
+ librust-log-0+release-max-level-trace-dev (= ${binary:Version}),
+ librust-log-0+release-max-level-warn-dev (= ${binary:Version}),
+ librust-log-0+serde-dev (= ${binary:Version}),
+ librust-log-0+std-dev (= ${binary:Version}),
+ librust-log-0+sval-dev (= ${binary:Version}),
+ librust-log-0+value-bag-dev (= ${binary:Version}),
+ librust-log-0.4-dev (= ${binary:Version}),
+ librust-log-0.4+default-dev (= ${binary:Version}),
+ librust-log-0.4+kv-unstable-dev (= ${binary:Version}),
+ librust-log-0.4+kv-unstable-serde-dev (= ${binary:Version}),
+ librust-log-0.4+kv-unstable-std-dev (= ${binary:Version}),
+ librust-log-0.4+kv-unstable-sval-dev (= ${binary:Version}),
+ librust-log-0.4+max-level-debug-dev (= ${binary:Version}),
+ librust-log-0.4+max-level-error-dev (= ${binary:Version}),
+ librust-log-0.4+max-level-info-dev (= ${binary:Version}),
+ librust-log-0.4+max-level-off-dev (= ${binary:Version}),
+ librust-log-0.4+max-level-trace-dev (= ${binary:Version}),
+ librust-log-0.4+max-level-warn-dev (= ${binary:Version}),
+ librust-log-0.4+release-max-level-debug-dev (= ${binary:Version}),
+ librust-log-0.4+release-max-level-error-dev (= ${binary:Version}),
+ librust-log-0.4+release-max-level-info-dev (= ${binary:Version}),
+ librust-log-0.4+release-max-level-off-dev (= ${binary:Version}),
+ librust-log-0.4+release-max-level-trace-dev (= ${binary:Version}),
+ librust-log-0.4+release-max-level-warn-dev (= ${binary:Version}),
+ librust-log-0.4+serde-dev (= ${binary:Version}),
+ librust-log-0.4+std-dev (= ${binary:Version}),
+ librust-log-0.4+sval-dev (= ${binary:Version}),
+ librust-log-0.4+value-bag-dev (= ${binary:Version}),
+ librust-log-0.4.17-dev (= ${binary:Version}),
+ librust-log-0.4.17+default-dev (= ${binary:Version}),
+ librust-log-0.4.17+kv-unstable-dev (= ${binary:Version}),
+ librust-log-0.4.17+kv-unstable-serde-dev (= ${binary:Version}),
+ librust-log-0.4.17+kv-unstable-std-dev (= ${binary:Version}),
+ librust-log-0.4.17+kv-unstable-sval-dev (= ${binary:Version}),
+ librust-log-0.4.17+max-level-debug-dev (= ${binary:Version}),
+ librust-log-0.4.17+max-level-error-dev (= ${binary:Version}),
+ librust-log-0.4.17+max-level-info-dev (= ${binary:Version}),
+ librust-log-0.4.17+max-level-off-dev (= ${binary:Version}),
+ librust-log-0.4.17+max-level-trace-dev (= ${binary:Version}),
+ librust-log-0.4.17+max-level-warn-dev (= ${binary:Version}),
+ librust-log-0.4.17+release-max-level-debug-dev (= ${binary:Version}),
+ librust-log-0.4.17+release-max-level-error-dev (= ${binary:Version}),
+ librust-log-0.4.17+release-max-level-info-dev (= ${binary:Version}),
+ librust-log-0.4.17+release-max-level-off-dev (= ${binary:Version}),
+ librust-log-0.4.17+release-max-level-trace-dev (= ${binary:Version}),
+ librust-log-0.4.17+release-max-level-warn-dev (= ${binary:Version}),
+ librust-log-0.4.17+serde-dev (= ${binary:Version}),
+ librust-log-0.4.17+std-dev (= ${binary:Version}),
+ librust-log-0.4.17+sval-dev (= ${binary:Version}),
+ librust-log-0.4.17+value-bag-dev (= ${binary:Version})
+Description: Lightweight logging facade for Rust - Rust source code
+ This package contains the source for the Rust log crate, packaged by debcargo
+ for use with cargo and dh-cargo.
+
